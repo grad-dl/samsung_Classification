@@ -24,7 +24,7 @@ Other datasets can be downloaded with the following links:
 - [Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats/data)
 ..Download both train and test datasets, and unzip under `.pytorch/Cat_Dog_data`. Make sure the folders are named `train` and `test`, respectively.
 ..Run the following commands:
->```
+```
 cd ~/.pytorch/Cat_and_Dog_data/train
 mkdir cat dog
 mv cat.* cat/
