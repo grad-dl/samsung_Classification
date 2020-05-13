@@ -22,8 +22,8 @@ trainset = datasets.FashionMNIST('~/.pytorch/F_MNIST_data/', download=True, trai
 
 Other datasets can be downloaded with the following links:
 - [Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats/data)
-..Download both train and test datasets, and unzip under `.pytorch/Cat_Dog_data`. Make sure the folders are named `train` and `test`, respectively.
-..Run the following commands:
+..*Download both train and test datasets, and unzip under `.pytorch/Cat_Dog_data`. Make sure the folders are named `train` and `test`, respectively.
+..*Run the following commands:
 ```
 cd ~/.pytorch/Cat_and_Dog_data/train
 mkdir cat dog
@@ -36,6 +36,7 @@ mv *.jpg data/
 
 Move the unzipped data to `~/.pytorch/` folder
 
+## Acknowledgements
 A majority of this code was adopted from the Udacity Deep Learning course. 
 Big thanks to Udacity for providing their code on an MIT License.
 [Link to Udacity code](https://github.com/udacity/deep-learning-v2-pytorch/)
