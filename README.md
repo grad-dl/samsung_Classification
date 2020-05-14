@@ -5,6 +5,12 @@
 ```
 pip install -r requirements.txt
 ```
+The above command assumes you are in a clean Python virtualenv, running Python3.7.x
+
+If you're running Conda on a windows machine, the above installation may not work. 
+* First, install PyTorch version 1.2.0 by following the instructions from this [link](https://pytorch.org/get-started/previous-versions/#v120).
+* Then, remove the lines `torch==1.2.0`, `torchvision==0.4.0` and run the command above. 
+* For some unknown reason, conda on windows won't let you install Pytorch with the `requirements.txt`.
 
 ## Datasets
 
@@ -20,21 +26,23 @@ trainset = datasets.FashionMNIST('~/.pytorch/F_MNIST_data/', download=True, trai
 trainset = datasets.FashionMNIST('~/.pytorch/F_MNIST_data/', download=True, train=False)
 ```
 
-Other datasets can be downloaded with the following links:
-- [Dogs vs. Cats](https://www.kaggle.com/c/dogs-vs-cats/data)
-- Download both train and test datasets, and unzip under `.pytorch/Cat_Dog_data`. Make sure the folders are named `train` and `test`, respectively.
-- Run the following commands:
+The Cats vs Dogs dataset can be downloaded as follows:
 ```
-cd ~/.pytorch/Cat_and_Dog_data/train
-mkdir cat dog
-mv cat.* cat/
-mv dog.* dog/
-cd ~/.pytorch/Cat_and_Dog_data/test
-mkdir data
-mv *.jpg data/
+cd ~/.pytorch
+wget https://s3.amazonaws.com/content.udacity-data.com/nd089/Cat_Dog_data.zip
+unzip Cat_Dog_data.zip
 ```
 
-Move the unzipped data to `~/.pytorch/` folder
+## Pretrained Models
+
+Lastly, we have some pre-trained models we need to download. Open up a python console and run the following commands:
+```
+from torchvision import models
+model = models.resnet18(pretrained=True)
+model = models.resnet50(pretrained=True)
+model = models.desnet121(pretrained=True)
+```
+This will download the torch models to the default folder. (Usually this is `~/.cache/torch/checkpoints/`)
 
 ## Acknowledgements
 A majority of this code was adopted from the Udacity Deep Learning course. 
