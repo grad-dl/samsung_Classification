@@ -3,7 +3,7 @@
 ## Environment
 ### Please install the requirements:
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt --user
 ```
 The above command assumes you are in a clean Python virtualenv, running Python3.7.x
 
