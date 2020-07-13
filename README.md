@@ -43,8 +43,3 @@ model = models.resnet50(pretrained=True)
 model = models.desnet121(pretrained=True)
 ```
 This will download the torch models to the default folder. (Usually this is `~/.cache/torch/checkpoints/`)
-
-## Acknowledgements
-A majority of this code was adopted from the Udacity Deep Learning course. 
-Big thanks to Udacity for providing their code on an MIT License.
-[Link to Udacity code](https://github.com/udacity/deep-learning-v2-pytorch/)
